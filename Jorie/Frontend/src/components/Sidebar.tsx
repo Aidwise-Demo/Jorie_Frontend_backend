@@ -131,10 +131,10 @@ export function Sidebar({ onViewChange, currentView }) {
     }));
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("token"); // Clear JWT from localStorage
-    navigate("/login"); // Redirect to login page
-  };
+  // const handleLogout = () => {
+  //   localStorage.removeItem("token"); // Clear JWT from localStorage
+  //   navigate("/login"); // Redirect to login page
+  // };
 
   return (
     <div className="h-screen w-64 border-r bg-sidebar flex flex-col">
@@ -197,8 +197,7 @@ export function Sidebar({ onViewChange, currentView }) {
               onClick={undefined}
             />
             <SidebarSubItem title="Care Variations"         
-            onClick={() => onViewChange("carevariation")}
-              isActive={currentView === "carevariation"} />
+            onClick={undefined} />
             <SidebarSubItem title="Outcome Reporting" onClick={undefined} />
             <SidebarSubItem title="Predicted Utilization Odds" onClick={undefined} />
           </NestedSidebarItem>
@@ -221,7 +220,8 @@ export function Sidebar({ onViewChange, currentView }) {
               onClick={() => onViewChange("patientTimeline")}
               isActive={currentView === "patientTimeline"}
             />
-            <SidebarSubItem title="Adherence & Engagement Scorecard" onClick={undefined} />
+            <SidebarSubItem title="Adherence & Engagement Scorecard" onClick={() => onViewChange("adherenceScorecard")}
+              isActive={currentView === "adherenceScorecard"} />
 
           </NestedSidebarItem>
         </SidebarItem>
