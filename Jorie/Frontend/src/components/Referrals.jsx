@@ -213,10 +213,7 @@ export function ReferralManagement() {
   }, [activeTab, searchValue, sortByCountry]);
 
   return (
-    <div className="p-8 min-h-screen">
-      <div className="max-w-7xl mx-auto">
-        {/* <h1 className="text-2xl font-semibold mb-6">Referral Management</h1> */}
-        
+      <>
         <div className="flex items-center justify-between mb-6 gap-4">
           <div className="relative flex-1 max-w-md">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
@@ -472,7 +469,6 @@ export function ReferralManagement() {
             ))}
           </Tabs>
         </div>
-      </div>
-    </div>
+      </>
   );
 }

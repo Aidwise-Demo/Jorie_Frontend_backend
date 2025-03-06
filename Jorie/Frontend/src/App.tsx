@@ -6,9 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
-import PrivateRoute from "./components/PrivateRoute";
-import ReferralManagementPage from "./pages/ReferralManagement";
-// import PatientListing from "./pages/PatientListing";
+import { PrivateRoute, PublicRoute } from "./components/AuthRoute"; // Updated import
+import LandingPage from "./pages/Landing";
 
 const queryClient = new QueryClient();
 
@@ -20,13 +19,15 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/login" element={<Login />} />
+            {/* Public Routes - redirect to home if already logged in */}
+            <Route element={<PublicRoute />}>
+              <Route path="/login" element={<Login />} />
+            </Route>
             
-            {/* Protected Routes */}
+            {/* Protected Routes - require login */}
             <Route element={<PrivateRoute />}>
-              <Route path="/" element={<Index />} />
-              {/* <Route path="/rm" element={<ReferralManagementPage />} /> added via sidebar options instead */}
-              {/* <Route path="/patients" element={<PatientListing />} />  */}
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/home" element={<Index />} />
             </Route>
 
             {/* Catch-all */}

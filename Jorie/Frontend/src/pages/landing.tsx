@@ -27,9 +27,11 @@
 // export default LandingPage;
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import { Activity, ChartBar, Database, LineChart } from "lucide-react";
 
-const LandingPage = ({ setCurrentView }) => {
+const LandingPage = () => {
+  const navigate = useNavigate();
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-gray-100 to-white">
       {/* Background Image with Overlay */}
@@ -61,7 +63,7 @@ const LandingPage = ({ setCurrentView }) => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-200">
             <Button 
-              onClick={() => setCurrentView("referralmanagement")}
+              onClick={() => navigate("/home")}
               className="px-8 py-6 text-lg rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Get Started

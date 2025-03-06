@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
 import Bulb from "../assets/Bulb.png";
+import site from "../components/API"
+
 
 function Login() {
-    const [isSignup, setIsSignup] = useState(false);
+    const [isSignup, setIsSignup] = useState(false);    
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const navigate = useNavigate(); // Initialize navigate function
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -16,29 +18,21 @@ function Login() {
     
         try {
             const endpoint = isSignup ? "/register" : "/login";
-            const response = await fetch(`http://localhost:5000${endpoint}`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, password }),
-            });
-    
-            const data = await response.json();
-            if (!response.ok) throw new Error(data.message || "Authentication failed");
-    
-            // Store token in localStorage
+            const { data } = await site.post(endpoint, { email, password });
+
+            // Store both token and email in localStorage
             localStorage.setItem("token", data.token);
+            localStorage.setItem("userEmail", email);
     
             alert(data.message);
-            console.log("Success:", data);
-    
-            // Redirect to home page after successful login
             navigate("/");
         } catch (error) {
-            setError(error.message);
-            alert(error.message);
-            console.error("Error:", error);
+            setError(error.response?.data?.message || "Authentication failed");
+            alert(error.response?.data?.message || "Authentication failed");
         }
     };
+
+    
 
     return (
         <div className="login-container">

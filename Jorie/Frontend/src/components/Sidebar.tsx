@@ -138,13 +138,13 @@ export function Sidebar({ onViewChange, currentView }) {
 
   return (
     <div className="h-screen w-64 border-r bg-sidebar flex flex-col">
-      <div className="p-4 border-b flex items-center justify-center">
+      {/* <div className="p-4 border-b flex items-center justify-center">
           <img 
             src="/lovable-uploads/Logo2.png" 
             alt="Logo" 
             className="h-16 w-auto object-contain rounded-md" 
           />
-      </div>
+      </div> */}
       
       <div className="p-4 text-sm text-gray-500">Menu</div>
       
@@ -183,6 +183,16 @@ export function Sidebar({ onViewChange, currentView }) {
             onClick={() => toggleSection("practiceLevel")}
           >
             <SidebarSubItem 
+              title="Persona Comparison" 
+              onClick={() => onViewChange("personaComparison")}
+              isActive={currentView === "personaComparison"}
+            />  
+            <SidebarSubItem 
+              title="Persona Study to Generate Protocols"
+              onClick={() => onViewChange("adherenceScorecard")}
+              isActive={currentView === "adherenceScorecard"}
+            />
+            <SidebarSubItem 
               title="Guideline Adherence Evaluator" 
               onClick={undefined}
             />
@@ -211,28 +221,18 @@ export function Sidebar({ onViewChange, currentView }) {
               onClick={() => onViewChange("patientTimeline")}
               isActive={currentView === "patientTimeline"}
             />
-            <SidebarSubItem 
-              title="Persona Comparison" 
-              onClick={() => onViewChange("personaComparison")}
-              isActive={currentView === "personaComparison"}
-            />  
-            <SidebarSubItem 
-              title="Persona Study to Generate Protocols"
-              onClick={() => onViewChange("adherenceScorecard")}
-              isActive={currentView === "adherenceScorecard"}
-            />
             <SidebarSubItem title="Adherence & Engagement Scorecard" onClick={undefined} />
 
           </NestedSidebarItem>
         </SidebarItem>
       </div>
       
-      <div className="mt-auto p-4 border-t">
+      {/* <div className="mt-auto p-4 border-t">
         <button className="sidebar-link w-full justify-start" onClick={handleLogout}>
           <LogOut size={18} />
           <span>Log out</span>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
