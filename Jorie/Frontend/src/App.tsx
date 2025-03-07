@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import { PrivateRoute, PublicRoute } from "./components/AuthRoute"; // Updated import
-import LandingPage from "./pages/Landing";
+import LandingPage from "./pages/landing";
 
 const queryClient = new QueryClient();
 
