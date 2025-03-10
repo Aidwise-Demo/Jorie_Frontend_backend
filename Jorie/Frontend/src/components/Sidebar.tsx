@@ -159,6 +159,11 @@ export function Sidebar({ onViewChange, currentView }) {
           <SidebarSubItem title="Care Voyage: Patient Recommendation" 
             onClick={() => onViewChange("patientrecommendations")}
             isActive={currentView === "patientrecommendations"} />
+                        <SidebarSubItem 
+              title="Patient Timeline" 
+              onClick={() => onViewChange("patientTimeline")}
+              isActive={currentView === "patientTimeline"}
+            />
           <SidebarSubItem title="Referral Management" 
             onClick={() => onViewChange("referralmanagement")}
             isActive={currentView === "referralmanagement"} />
@@ -215,11 +220,7 @@ export function Sidebar({ onViewChange, currentView }) {
               onClick={() => onViewChange("patientRiskProfiler")}
               isActive={currentView === "patientRiskProfiler"}
             />
-            <SidebarSubItem 
-              title="Patient Timeline" 
-              onClick={() => onViewChange("patientTimeline")}
-              isActive={currentView === "patientTimeline"}
-            />
+
             <SidebarSubItem title="Adherence & Engagement Scorecard" onClick={() => onViewChange("adherenceScorecard")}
               isActive={currentView === "adherenceScorecard"} />
 

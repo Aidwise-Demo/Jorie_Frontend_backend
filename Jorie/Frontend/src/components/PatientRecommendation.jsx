@@ -5,19 +5,20 @@ import { LabResults } from "@/components/LabResults";
 const patients = [
   {
     "id": "45987",
-    "name": "Amit Verma",
-    "address": "A-45, 3rd Floor, Sector-15, Noida, UP-201301"
-  },
-  {
+    "name": "John Smith",
+    "address": "45A, 3rd Floor, Main Street, Manhattan, New York, NY 10001"
+},
+{
     "id": "38214",
-    "name": "Rohit Sharma",
-    "address": "B-12, Ground Floor, Indirapuram, Ghaziabad, UP-201014"
-  },
-  {
+    "name": "Michael Johnson",
+    "address": "12B, Ground Floor, Elm Street, Los Angeles, CA 90001"
+},
+{
     "id": "52763",
-    "name": "Priya Gupta",
-    "address": "C-78, Tower 5, Gomti Nagar, Lucknow, UP-226010"
-  }
+    "name": "Emily Davis",
+    "address": "78C, Tower 5, Sunset Blvd, Miami, FL 33101"
+}
+
 ];
 
 const patientSummary = "On 13th February 2024, the patient presented with sepsis and was recommended 14 days of medication. CBC and KFT tests were advised, and an ENT department visit for cleansing was scheduled. On 1st February 2024, the patient continued treatment for Chronic Kidney Disease (CKD) and was prescribed 10 days of medication. Earlier, from 19th January to 27th January 2024, the patient was admitted for various tests.";
