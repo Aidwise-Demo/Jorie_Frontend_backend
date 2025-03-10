@@ -189,8 +189,8 @@ export function Sidebar({ onViewChange, currentView }) {
             />  
             <SidebarSubItem 
               title="Persona Study to Generate Protocols"
-              onClick={() => onViewChange("personaStudy")}
-              isActive={currentView === "personaStudy"}
+              onClick={() => onViewChange("adherenceScorecard")}
+              isActive={currentView === "adherenceScorecard"}
             />
             <SidebarSubItem 
               title="Guideline Adherence Evaluator" 
