@@ -30,7 +30,8 @@ export function Navbar() {
         <img 
           src="/lovable-uploads/Logo.png" 
           alt="Jorie AI" 
-          className="h-8" 
+          className="h-8"
+          onClick={() => navigate("/")}
         />
       </div>
       

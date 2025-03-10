@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { 
   BarChart3, 
   ChevronDown, 
@@ -122,8 +121,6 @@ export function Sidebar({ onViewChange, currentView }) {
     patientLevel: true,
   });
 
-  const navigate = useNavigate();
-
   const toggleSection = (section) => {
     setOpenSections(prev => ({
       ...prev,
@@ -131,21 +128,8 @@ export function Sidebar({ onViewChange, currentView }) {
     }));
   };
 
-  // const handleLogout = () => {
-  //   localStorage.removeItem("token"); // Clear JWT from localStorage
-  //   navigate("/login"); // Redirect to login page
-  // };
-
   return (
     <div className="h-screen w-64 border-r bg-sidebar flex flex-col">
-      {/* <div className="p-4 border-b flex items-center justify-center">
-          <img 
-            src="/lovable-uploads/Logo2.png" 
-            alt="Logo" 
-            className="h-16 w-auto object-contain rounded-md" 
-          />
-      </div> */}
-      
       <div className="p-4 text-sm text-gray-500">Menu</div>
       
       <div className="flex-1 overflow-y-auto px-3 py-2">
@@ -156,20 +140,31 @@ export function Sidebar({ onViewChange, currentView }) {
           isOpen={openSections.clinicalInteraction}
           onClick={() => toggleSection("clinicalInteraction")}
         >
-          <SidebarSubItem title="Care Voyage: Patient Recommendation" 
+          <SidebarSubItem 
+            title="Care Voyage: Patient Recommendation" 
             onClick={() => onViewChange("patientTimeline")}
-            isActive={currentView === "patientTimeline"} />
-                        {/* <SidebarSubItem 
-              title="Patient Timeline" 
-              onClick={() => onViewChange("patientTimeline")}
-              isActive={currentView === "patientTimeline"}
-            /> */}
-          <SidebarSubItem title="Referral Management" 
+            isActive={currentView === "patientTimeline"} 
+          />
+          <SidebarSubItem 
+            title="Referral Management" 
             onClick={() => onViewChange("referralmanagement")}
-            isActive={currentView === "referralmanagement"} />
-          <SidebarSubItem title="Outbound Campaigns" onClick={undefined} />
-          <SidebarSubItem title="Patient Experience Survey" onClick={undefined} />
-          <SidebarSubItem title="Utilization Review and Management" onClick={undefined} />
+            isActive={currentView === "referralmanagement"} 
+          />
+          <SidebarSubItem 
+            title="Outbound Campaigns" 
+            onClick={() => onViewChange("outboundCampaigns")}
+            isActive={currentView === "outboundCampaigns"} 
+          />
+          <SidebarSubItem 
+            title="Patient Experience Survey" 
+            onClick={() => onViewChange("patientExperienceSurvey")}
+            isActive={currentView === "patientExperienceSurvey"} 
+          />
+          <SidebarSubItem 
+            title="Utilization Review and Management" 
+            onClick={() => onViewChange("utilizationReview")}
+            isActive={currentView === "utilizationReview"} 
+          />
         </SidebarItem>
         
         <SidebarItem 
@@ -194,17 +189,29 @@ export function Sidebar({ onViewChange, currentView }) {
             />  
             <SidebarSubItem 
               title="Persona Study to Generate Protocols"
-              onClick={() => onViewChange("adherenceScorecard")}
-              isActive={currentView === "adherenceScorecard"}
+              onClick={() => onViewChange("personaStudy")}
+              isActive={currentView === "personaStudy"}
             />
             <SidebarSubItem 
               title="Guideline Adherence Evaluator" 
-              onClick={undefined}
+              onClick={() => onViewChange("guidelineAdherence")}
+              isActive={currentView === "guidelineAdherence"}
             />
-            <SidebarSubItem title="Care Variations"         
-            onClick={undefined} />
-            <SidebarSubItem title="Outcome Reporting" onClick={undefined} />
-            <SidebarSubItem title="Predicted Utilization Odds" onClick={undefined} />
+            <SidebarSubItem 
+              title="Care Variations" 
+              onClick={() => onViewChange("careVariations")}
+              isActive={currentView === "careVariations"} 
+            />
+            <SidebarSubItem 
+              title="Outcome Reporting" 
+              onClick={() => onViewChange("outcomeReporting")}
+              isActive={currentView === "outcomeReporting"} 
+            />
+            <SidebarSubItem 
+              title="Predicted Utilization Odds" 
+              onClick={() => onViewChange("predictedUtilization")}
+              isActive={currentView === "predictedUtilization"} 
+            />
           </NestedSidebarItem>
           
           <NestedSidebarItem 
@@ -212,7 +219,6 @@ export function Sidebar({ onViewChange, currentView }) {
             title="Patient Level"
             hasChildren
             isOpen={openSections.patientLevel}
-            // isActive={true}
             onClick={() => toggleSection("patientLevel")}
           >
             <SidebarSubItem 
@@ -220,20 +226,14 @@ export function Sidebar({ onViewChange, currentView }) {
               onClick={() => onViewChange("patientRiskProfiler")}
               isActive={currentView === "patientRiskProfiler"}
             />
-
-            <SidebarSubItem title="Adherence & Engagement Scorecard" onClick={() => onViewChange("adherenceScorecard")}
-              isActive={currentView === "adherenceScorecard"} />
-
+            <SidebarSubItem 
+              title="Adherence & Engagement Scorecard" 
+              onClick={() => onViewChange("adherenceScorecard")}
+              isActive={currentView === "adherenceScorecard"} 
+            />
           </NestedSidebarItem>
         </SidebarItem>
       </div>
-      
-      {/* <div className="mt-auto p-4 border-t">
-        <button className="sidebar-link w-full justify-start" onClick={handleLogout}>
-          <LogOut size={18} />
-          <span>Log out</span>
-        </button>
-      </div> */}
     </div>
   );
 }
