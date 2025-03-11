@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const referrals = [
   {
     id: 1,
-    patientName: "Sophia Martinez",
+    patientName: "E649176",
     referredBy: "Dr. Eric Johnson",
     referDate: "05/14/24",
     alignProgram: "Cardiology Care",
@@ -18,7 +18,7 @@ const referrals = [
   },
   {
     id: 2,
-    patientName: "James Wilson",
+    patientName: "E812461",
     referredBy: "Dr. Maria Rodriguez",
     referDate: "05/10/24",
     alignProgram: "Diabetes Management",
@@ -27,7 +27,7 @@ const referrals = [
   },
   {
     id: 3,
-    patientName: "Emily Thompson",
+    patientName: "E811444",
     referredBy: "Dr. Michael Chang",
     referDate: "05/02/24",
     alignProgram: "Physical Therapy",
@@ -36,7 +36,7 @@ const referrals = [
   },
   {
     id: 4,
-    patientName: "Raj Patel",
+    patientName: "E1542996",
     referredBy: "Dr. Sarah Williams",
     referDate: "04/28/24",
     alignProgram: "Orthopedic Care",
@@ -45,7 +45,7 @@ const referrals = [
   },
   {
     id: 5,
-    patientName: "Liu Wei",
+    patientName: "E504793",
     referredBy: "Dr. Jennifer Adams",
     referDate: "04/20/24",
     alignProgram: "Surgery Transition",
@@ -54,7 +54,7 @@ const referrals = [
   },
   {
     id: 6,
-    patientName: "Olivia Johnson",
+    patientName: "E774169",
     referredBy: "Dr. David Garcia",
     referDate: "04/15/24",
     alignProgram: "Mental Health Program",
@@ -63,7 +63,7 @@ const referrals = [
   },
   {
     id: 7,
-    patientName: "Aiden Chen",
+    patientName: "E810865",
     referredBy: "Dr. Elizabeth Taylor",
     referDate: "04/07/24",
     alignProgram: "Nutrition Counseling",
@@ -72,7 +72,7 @@ const referrals = [
   },
   {
     id: 8,
-    patientName: "Maya Singh",
+    patientName: "E1002865",
     referredBy: "Dr. Robert Lee",
     referDate: "04/05/24",
     alignProgram: "Cardiology Care",
@@ -81,7 +81,7 @@ const referrals = [
   },
   {
     id: 9,
-    patientName: "Daniel Kim",
+    patientName: "E1000150",
     referredBy: "Dr. Patricia Wong",
     referDate: "03/28/24",
     alignProgram: "Pain Management",
@@ -90,7 +90,7 @@ const referrals = [
   },
   {
     id: 10,
-    patientName: "Isabella García",
+    patientName: "E1025044",
     referredBy: "Dr. Thomas Brown",
     referDate: "03/22/24",
     alignProgram: "Respiratory Care",
@@ -99,7 +99,7 @@ const referrals = [
   },
   {
     id: 11,
-    patientName: "Lucas Müller",
+    patientName: "E1000022",
     referredBy: "Dr. Anna Schmidt",
     referDate: "03/18/24",
     alignProgram: "Diabetes Management",
@@ -108,7 +108,7 @@ const referrals = [
   },
   {
     id: 12,
-    patientName: "Sophie Dubois",
+    patientName: "E1025044",
     referredBy: "Dr. Jean Martin",
     referDate: "03/15/24",
     alignProgram: "Mental Health Program",
@@ -117,7 +117,7 @@ const referrals = [
   },
   {
     id: 13,
-    patientName: "Ethan Williams",
+    patientName: "E104026",
     referredBy: "Dr. Linda Chen",
     referDate: "03/12/24",
     alignProgram: "Orthopedic Care",
@@ -126,7 +126,7 @@ const referrals = [
   },
   {
     id: 14,
-    patientName: "Amelia Johnson",
+    patientName: "E1000150",
     referredBy: "Dr. James Wilson",
     referDate: "03/08/24",
     alignProgram: "Prenatal Program",
@@ -135,7 +135,7 @@ const referrals = [
   },
   {
     id: 15,
-    patientName: "Mohammed Al-Farsi",
+    patientName: "E1018811",
     referredBy: "Dr. Fatima Ahmed",
     referDate: "03/01/24",
     alignProgram: "Cardiology Care",
