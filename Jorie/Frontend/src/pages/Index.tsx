@@ -87,9 +87,9 @@ const Index = () => {
             <div className="mb-4 text-emerald-600">
               <ClipboardList className="h-12 w-12 mx-auto" />
             </div>
-            <h3 className="text-xl font-medium text-gray-800 mb-2">Dashboard in Development</h3>
+            <h3 className="text-xl font-medium text-gray-800 mb-2">In Development</h3>
             <p className="text-gray-600 mb-6">
-              This feature is currently being developed and will be available soon. Our team is working to integrate this dashboard into the platform.
+              This feature is currently being developed and will be available soon. Our team is working to integrate this into the platform.
             </p>
             <button 
               onClick={() => handleViewChange(currentView)}
